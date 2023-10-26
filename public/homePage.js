@@ -42,7 +42,7 @@ manage.addMoneyCallback = (data) => {
     ApiConnector.addMoney({currency: data.currency, amount: data.amount}, response => {
         if(response.success === true) {
             ProfileWidget.showProfile(response.data);
-            // this.setMessage(response.success, response.message === 'fffffff')
+            MoneyManager.setMessage(response.success, response.message = 'fffffff')
         };
 
         if(response.success !== true) {
